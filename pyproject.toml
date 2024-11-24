@@ -1,7 +1,12 @@
 [tool.kedro]
 package_name = "spaceflight_tutorial"
 project_name = "spaceflight_tutorial"
-project_version = "0.18.4"
+project_version = "0.18.4"  # Match this to your Kedro version
+source_dir = "src"
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
 
 [tool.isort]
 profile = "black"
@@ -15,3 +20,6 @@ addopts = """
 fail_under = 0
 show_missing = true
 exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
+
+[tool.kedro_telemetry]
+project_id = "e74a5e3d34394a69800f16466956698c"
